@@ -1,7 +1,6 @@
 Set WshShell = CreateObject("WScript.Shell")
-scriptPath = WScript.ScriptFullName
-scriptFolder = Left(scriptPath, InStrRev(scriptPath, "\") - 1)
-batPath = scriptFolder & "\run.bat"
+backupScriptPath = WshShell.ExpandEnvironmentStrings("%BACKUP_SCRIPT_PATH%")
+batPath = backupScriptPath & "\run_backup.bat"
 
 WshShell.Run Chr(34) & batPath & Chr(34), 0
 Set WshShell = Nothing

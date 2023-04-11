@@ -29,4 +29,6 @@ echo Instalação concluída. O arquivo config.json foi criado com os caminhos f
 echo Copiando run_hidden.vbs para a pasta de inicialização...
 copy run_hidden.vbs "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"
 
+setx BACKUP_SCRIPT_PATH "%CD%"
+
 echo run_hidden.vbs copiado para a pasta de inicialização.
